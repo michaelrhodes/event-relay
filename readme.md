@@ -11,6 +11,22 @@ event-relay is a little module for proxying events through arbitrary emitters. I
 $ npm install event-relay
 ```
 
+## API
+``` 
+event-relay(
+
+  event (string):
+    the name of the event that
+    will be emitted
+
+  context (event_emitter):
+    the proxy who will emit the
+    aforementioned event. must 
+    have an emit() method
+
+)
+```
+
 ## Usage
 ``` js
 var EventEmitter = require('events').EventEmitter
