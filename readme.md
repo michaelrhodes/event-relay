@@ -36,7 +36,7 @@ var source = new EventEmitter
 var proxy = new EventEmitter
 
 proxy.on('relayed-event', function(data) {
-  // Do something with your data
+  // { some: 'data' }
 })
 
 source.on('event', relay('relayed-event', proxy))
