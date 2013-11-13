@@ -19,7 +19,7 @@ event-relay(
     the name of the event that
     will be emitted
 
-  context (event_emitter):
+  emitter (event_emitter):
     the proxy who will emit the
     aforementioned event. must 
     have an emit() method

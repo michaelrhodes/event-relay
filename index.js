@@ -1,5 +1,5 @@
-module.exports = function(_event, context) {
+module.exports = function(_event, emitter) {
   return function(data) {
-    context.emit(_event, data)
+    emitter.emit(_event, data)
   }
 }
