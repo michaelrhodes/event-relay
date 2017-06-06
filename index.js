@@ -1,5 +1,11 @@
-module.exports = function(_event, emitter) {
-  return function(data) {
-    emitter.emit(_event, data)
+var slice = Array.prototype.slice
+
+module.exports = relay
+
+function relay (_event, emitter) {
+  return function () {
+    var args = slice.call(arguments)
+    args.unshift(_event)
+    emitter.emit.apply(emitter, args)
   }
 }
